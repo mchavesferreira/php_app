@@ -25,22 +25,26 @@ if (mysqli_num_rows($result)) {
   //  $result->free();
 }
 
-
+// formatacao json
 $dadoswheather = array( 'RA' => 'CT120893',
           'temperatura' => $temperatura,
           'humidade' => $humidade );
 
- // Atribui os 3 arrays apenas um array
-$dados = array($cliente1);
+//$dadoswheather2 = array( 'RA' => 'CT120893',
+  //        'temperatura' => $temperatura,
+    //      'humidade' => $humidade );      
 
-// Adiciona o identificador "Contatos" aos dados
-$dados_identificador = array('wheater' => $dadoswheather); //dados
+ // Atribui os 3 arrays apenas um array
+//$dados = array($dadoswheather, $cliente1);
+
+// Adiciona o identificador "Contatos" aos dados //wheather
+//$dados_identificador = array('wheater' => $dados); //dados
 
 header('Content-type: application/json');
 $body = file_get_contents('php://input');
 
 // Tranforma o array $dados_identificador em JSON
-$dados_json = json_encode($dados_identificador);
+$dados_json = json_encode($dadoswheather);
 
 print_r($dados_json);
 // Escreve o conteúdo JSON no arquivo
