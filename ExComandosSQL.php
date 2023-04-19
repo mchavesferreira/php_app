@@ -15,7 +15,7 @@ use sensor;
 
 
 // CRIA TABELA
-CREATE TABLE tempLogr (
+CREATE TABLE tempLog (
     timeStamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     temperature int(11) NOT NULL,
     humidity int(11) NOT NULL,
