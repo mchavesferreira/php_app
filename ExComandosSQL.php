@@ -27,27 +27,25 @@ CREATE TABLE tempLog (
 describe tempLogo;
 
 // insere uma linha de dados
-INSERT INTO tempLogr (temperature, humidity)
+INSERT INTO tempLog (temperature, humidity)
     VALUES ('33','56');
 
-INSERT INTO tempLogo (temperature, humidity)
-    VALUES ('33','56');
 // seleciona todas as linhas da base de dados
-SELECT * FROM tempLogo;
-SELECT temperature FROM tempLogo;
-SELECT * FROM tempLogo limit 1;   // limita 1 linha
-SELECT * FROM tempLogo limit 2,3;   // limita 1 linha
-SELECT * FROM tempLogo order by timeStamp ASC;
-SELECT * FROM tempLogo order by timeStamp DESC;
-SELECT * FROM tempLogo where temperature=23;
-SELECT * FROM tempLogo WHERE DATE(timeStamp) = CURDATE();
-SELECT * FROM tempLogo WHERE DATE_SUB(CURDATE(),INTERVAL 1 DAY);
+SELECT * FROM tempLog;
+SELECT temperature FROM tempLog;
+SELECT * FROM tempLog limit 1;   // limita 1 linha
+SELECT * FROM tempLog limit 2,3;   // limita 1 linha
+SELECT * FROM tempLog order by timeStamp ASC;
+SELECT * FROM tempLog order by timeStamp DESC;
+SELECT * FROM tempLog where temperature=23;
+SELECT * FROM tempLog WHERE DATE(timeStamp) = CURDATE();
+SELECT * FROM tempLog WHERE DATE_SUB(CURDATE(),INTERVAL 1 DAY);
 
 //apagar linhas da tabela por seleção
-DELETE  from tempLogr where humidity=50;
+DELETE  from tempLog where humidity=50;
 
 // apagar tabela completa
-DROP TABLE tempLogr;
+DROP TABLE tempLog;
 
 /// guia https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html
 
