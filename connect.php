@@ -7,10 +7,9 @@
 	}
 
 	function Connection(){
-//ec2-15-228-78-221.sa-east-1.compute.amazonaws.com
-		$server="....rds.amazonaws.com";   // endereço do banco de dados ou localhost para locais
-		$user="admin";  // usuario
-		$pass="*****";  // senha
+
+		$server="localhost";   // endereço do banco de dados ou localhost para locais
+		$user="root";  // usuario
 		$db="sensor";   // nome da base de dados criada em mysql>  create database sensor;
 
 		$connection = mysqli_connect($server, $user, $pass) or die("Unable to Connect to '$server'");
