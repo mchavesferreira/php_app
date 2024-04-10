@@ -2,7 +2,7 @@
 //  exemplo de comandos php e mysql
 // conecta com o banco de dados via terminal
 // mysql -u root -p
-//mysql -u admin -h database-1.cscbnowewjwj.sa-east-1.rds.amazonaws.com -p
+//mysql -u admin  -p
 
 // mostra base de banco de dados
 show databases;
