@@ -24,7 +24,7 @@ const char *password = "senhpawifi";
 
   // ALTERAR ENDERECO DO SERVIDOR
 //Web/Server address to read/write from 
-const char *host = "http://ec2....compute.amazonaws.com/php_app";   // website or IP address of server
+const char *host = "http://ip_seu_servidor/php_app";   // website or IP address of server
 
 //=======================================================================
 //                    Power on setup
@@ -69,7 +69,7 @@ void loop() {
   //Post Data
   postData = "temp1=" + ADCData + "&hum1=" + humidade ;
   // ALTERAR ENDERECO DO SERVIDOR
-  http.begin("http://ec2....compute.amazonaws.com/php_app/add.php");              //Specify request destination
+  http.begin("http://ip_seu_servidor/php_app/add.php");              //Specify request destination
   http.addHeader("Content-Type", "application/x-www-form-urlencoded");    //Specify content-type header
 
   int httpCode = http.POST(postData);   //Send the request
