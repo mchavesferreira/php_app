@@ -1,4 +1,4 @@
-su<?php
+<?php
 
   include("connect.php");
 
